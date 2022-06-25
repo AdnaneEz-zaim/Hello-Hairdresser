@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProfilHairdresser">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_baseline_edit"
+            android:background="@drawable/etat_shape"
+            android:padding="7dp"
+            android:tooltipText="edit profile"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:layout_width="92dp"
+                android:layout_height="92dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/view"
+                    android:layout_width="92dp"
+                    android:layout_height="92dp"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="12dp"
+                    app:cardCornerRadius="50dp">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="92dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/adnane" />
+                </androidx.cardview.widget.CardView>
+
+                <ImageButton
+                    android:id="@+id/imageDangerLevel3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/etat_shape"
+                    android:translationZ="2dp"
+                    app:backgroundTint="@color/redColor" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2sp"
+                    android:text="Adnane EZ-ZAIM"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_phone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MA " />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="+212 601198272" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_star_24" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4.8" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="/320" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_pepple_type" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Man" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=" and Woman" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="fill_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layout1"
+                    android:layout_marginStart="15dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="waiting line"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/layout1"
+                    >
+                    <TextView
+                        android:id="@+id/dialog_No"
+                        android:layout_weight="1"
+                        android:text="TO RESUME"
+                        android:gravity="center"
+                        android:background="@drawable/shape_button"
+                        android:layout_marginVertical="10dp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#3C92D6"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"/>
+                    <TextView
+                        android:id="@+id/dialog_Yes"
+                        android:layout_weight="1"
+                        android:text="ClOSE STATE"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:backgroundTint="#D6D3D3"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/shape_button"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_height="40dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About Me"
+                android:textAlignment="center"
+                android:textColor="@color/vertApp"
+                android:textSize="17sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="2sp"
+                android:paddingStart="12dp"
+                android:paddingEnd="10dp"
+                android:text="Freelancers and entrepreneurs use about.me to grow their audience and get more clients. · Create a page to present who you are and what you do in one link." />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address :"
+                    android:textColor="@color/vertApp"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="2sp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp"
+                    android:text="7 rue des Fleurs 37000 Tours." />
+            </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                android:elevation="8dp"
+                app:cardCornerRadius="15sp">
+
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/mapitem"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="12dp"
+                android:text="Salon pictures"
+                android:textColor="@color/vertApp"
+                android:textSize="17sp" />
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPagerIamge"
+                android:layout_width="match_parent"
+                android:layout_height="320dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="12dp"
+                android:paddingTop="7dp"
+                android:text="Gallery"
+                android:textColor ="@color/vertApp"
+                android:textSize="17sp" />
+            <com.example.hellohairdresser.Adapters.MyGridView
+                android:id="@+id/simpleGridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingHorizontal="12dp"
+        android:layout_toRightOf="@+id/layout1"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="133sp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/vertApp"
+            android:background="@drawable/shape_button"
+            android:text="to resume" />
+
+        <Button
+            android:layout_width="148sp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:text="Close State" />
+    </RelativeLayout>
+</LinearLayout>
