@@ -15,6 +15,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloHairdresser">
         <activity
+            android:name=".Registration"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
             android:name=".ProfilHairdresser"
             android:exported="false" />
         <activity
@@ -24,7 +32,7 @@
             android:name=".HairdresserProfilClient"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Login"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
 
@@ -33,7 +41,7 @@
             android:value="AIzaSyBlSu10MiOHkTWarWmixWToKDT1UItIdqI" />
 
         <activity
-            android:name=".Profile"
+            android:name=".SplashScreen"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>

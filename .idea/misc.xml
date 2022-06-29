@@ -6,10 +6,16 @@
         <entry key="..\:/Users/ACER/AndroidStudioProjects/app/src/main/res/drawable/etat_shape.xml" value="0.1235" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.137" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/app/src/main/res/drawable/shape_button.xml" value="0.137" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/app/src/main/res/drawable/shape_input.xml" value="0.137" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/app/src/main/res/drawable/shape_logo.xml" value="0.137" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/app/src/main/res/drawable/shape_transparent.xml" value="0.137" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/app/src/main/res/layout/activity_hairdresser_profil.xml" value="0.31825795644891125" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/app/src/main/res/layout/activity_login.xml" value="0.20742753623188406" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/app/src/main/res/layout/activity_main.xml" value="0.20742753623188406" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/app/src/main/res/layout/activity_profil_hairdresser.xml" value="0.264" />
-        <entry key="..\:/Users/ACER/AndroidStudioProjects/app/src/main/res/layout/activity_profile.xml" value="0.20742753623188406" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/app/src/main/res/layout/activity_profile.xml" value="0.264" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/app/src/main/res/layout/activity_registration.xml" value="0.28428927680798005" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/app/src/main/res/layout/activity_splash_screen.xml" value="0.20742753623188406" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/app/src/main/res/layout/activity_working.xml" value="0.2" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/app/src/main/res/layout/gridview_item.xml" value="0.1265625" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1755" />
