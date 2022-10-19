@@ -86,7 +86,7 @@
                         android:indeterminateTint="@color/vertApp" />
 
                     <Button
-                        android:id="@+id/goToHome"
+                        android:id="@+id/loginBtn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="80sp"
