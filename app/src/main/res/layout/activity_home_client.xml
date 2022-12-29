@@ -12,6 +12,14 @@
         android:layout_height="220dp"
         android:background="@drawable/shape_button"
         />
+    <!--Recycler View widget-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewCategories"
+        android:scrollbars="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
