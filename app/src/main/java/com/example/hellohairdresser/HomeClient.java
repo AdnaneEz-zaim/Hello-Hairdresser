@@ -11,10 +11,9 @@ import android.view.View;
 import android.widget.AdapterView;
 
 import com.example.hellohairdresser.Adapters.GridHairdresserNear;
-import com.example.hellohairdresser.Adapters.GridViewAdapter;
 import com.example.hellohairdresser.Adapters.ImagesSliderAdapter;
 import com.example.hellohairdresser.Adapters.MyGridView;
-import com.example.hellohairdresser.Adapters.RecyclerViewAdapter;
+import com.example.hellohairdresser.Adapters.RecyclerViewAdapterCategories;
 
 import java.util.ArrayList;
 
@@ -33,7 +32,7 @@ public class HomeClient extends AppCompatActivity {
     // Layout Manager
     RecyclerView.LayoutManager RecyclerViewLayoutManager;
     // adapter class object
-    RecyclerViewAdapter adapterCategorie;
+    RecyclerViewAdapterCategories adapterCategorie;
     // Linear Layout Manager
     LinearLayoutManager HorizontalLayout;
     View ChildView;
@@ -80,7 +79,7 @@ public class HomeClient extends AppCompatActivity {
 
         // calling constructor of adapter
         // with source list as a parameter
-        adapterCategorie = new RecyclerViewAdapter(source);
+        adapterCategorie = new RecyclerViewAdapterCategories(source);
 
         // Set Horizontal Layout Manager
         // for Recycler view
