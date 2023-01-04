@@ -14,6 +14,8 @@ import com.example.hellohairdresser.Adapters.GridHairdresserNear;
 import com.example.hellohairdresser.Adapters.ImagesSliderAdapter;
 import com.example.hellohairdresser.Adapters.MyGridView;
 import com.example.hellohairdresser.Adapters.RecyclerViewAdapterCategories;
+import com.example.hellohairdresser.Adapters.RecyclerViewAdapterSalon;
+import com.example.hellohairdresser.Models.Salon;
 
 import java.util.ArrayList;
 
@@ -26,17 +28,24 @@ public class HomeClient extends AppCompatActivity {
 
 //  Recycle view Categories
     // Recycler View object
-    RecyclerView recyclerView;
-    // Array list for recycler view data source
-    ArrayList<String> source;
+    RecyclerView recycleViewCategories;
+    // Array list for recycler view data categoriesList
+    ArrayList<String> categoriesList;
     // Layout Manager
     RecyclerView.LayoutManager RecyclerViewLayoutManager;
     // adapter class object
-    RecyclerViewAdapterCategories adapterCategorie;
+    RecyclerViewAdapterCategories adapterCategories;
     // Linear Layout Manager
     LinearLayoutManager HorizontalLayout;
-    View ChildView;
-    int RecyclerViewItemPosition;
+
+// Recycle view Salon proche
+    //Recycler View object
+    RecyclerView recyclerViewSalon;
+    //ArrayList for recycle view ListSalon
+    ArrayList<Salon> salonList;
+    // salon adapter
+    RecyclerViewAdapterSalon recyclerViewAdapterSalon;
+
 
 
     @Override
@@ -49,7 +58,8 @@ public class HomeClient extends AppCompatActivity {
         ImagesSliderAdapter adapter = new ImagesSliderAdapter(this);
         viewPager.setAdapter(adapter);
 
-        //image grid slider
+
+       /* //image grid slider
         simpleGrid = (MyGridView) findViewById(R.id.gridViewDresser); // init GridView
         // Create an object of CustomAdapter and set Adapter to GirdView
         GridHairdresserNear customAdapter = new GridHairdresserNear(getApplicationContext(), logos);
@@ -63,44 +73,74 @@ public class HomeClient extends AppCompatActivity {
                 //intent.putExtra("image", logos[position]); // put image data in Intent
                   startActivity(intent); // start Intent
             }
-        });
+        });*/
 
-        //categories *
-
+        //categories List
         // initialisation with id's
-        recyclerView = (RecyclerView)findViewById(R.id.recyclerviewCategories);
+        recycleViewCategories = (RecyclerView)findViewById(R.id.recyclerviewCategories);
         RecyclerViewLayoutManager = new LinearLayoutManager(getApplicationContext());
 
         // Set LayoutManager on Recycler View
-        recyclerView.setLayoutManager(RecyclerViewLayoutManager);
+        recycleViewCategories.setLayoutManager(RecyclerViewLayoutManager);
 
         // Adding items to RecyclerView.
         AddItemsToRecyclerViewArrayList();
 
         // calling constructor of adapter
-        // with source list as a parameter
-        adapterCategorie = new RecyclerViewAdapterCategories(source);
+        // with categoriesList list as a parameter
+        adapterCategories = new RecyclerViewAdapterCategories(categoriesList);
 
         // Set Horizontal Layout Manager
         // for Recycler view
         HorizontalLayout = new LinearLayoutManager(HomeClient.this, LinearLayoutManager.HORIZONTAL, false);
-        recyclerView.setLayoutManager(HorizontalLayout);
+        recycleViewCategories.setLayoutManager(HorizontalLayout);
 
         // Set adapter on recycler view
-        recyclerView.setAdapter(adapterCategorie);
+        recycleViewCategories.setAdapter(adapterCategories);
+
+
+        // Salon List
+        // initialisation with id's
+        recyclerViewSalon = (RecyclerView)findViewById(R.id.recyclerviewSalon);
+        //RecyclerViewLayoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerViewSalon.setLayoutManager(RecyclerViewLayoutManager);
+        // Adding items to RecyclerView.
+        AddItemsToRecyclerViewSalonList();
+
+        // calling constructor of adapter
+        // with categoriesList list as a parameter
+        recyclerViewAdapterSalon = new RecyclerViewAdapterSalon(salonList);
+
+        // Set Horizontal Layout Manager
+        // for Recycler view
+       // HorizontalLayout = new LinearLayoutManager(HomeClient.this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewSalon.setLayoutManager(HorizontalLayout);
+
+        // Set adapter on recycler view
+        recyclerViewSalon.setAdapter(recyclerViewAdapterSalon);
+    }
+
+    private void AddItemsToRecyclerViewSalonList() {
+        salonList = new ArrayList<>();
+        salonList.add(new Salon("Salon Name 1","32 emile lettre st 42100,FR"));
+        salonList.add(new Salon("Salon Name 2","320 rue bergsson st 42100,FR"));
+        salonList.add(new Salon("Salon Name 3","13 rue 11 nouvembre st 42100,FR"));
+        salonList.add(new Salon("Salon Name 4","28 jeon gourise st 42100,FR"));
+        salonList.add(new Salon("Salon Name 5","82 anatolr france st 42100,FR"));
+        salonList.add(new Salon("Salon Name 6","79 jeon boule sartre st 42100,FR"));
     }
 
     // Function to add items in RecyclerView.
     public void AddItemsToRecyclerViewArrayList()
     {
         // Adding items to ArrayList
-        source = new ArrayList<>();
-        source.add("gfg");
-        source.add("is");
-        source.add("best");
-        source.add("site");
-        source.add("for");
-        source.add("interview");
-        source.add("preparation");
+         categoriesList= new ArrayList<>();
+         categoriesList.add("categorie 1");
+         categoriesList.add("categorie 2");
+         categoriesList.add("categorie 3");
+         categoriesList.add("categorie 4");
+         categoriesList.add("categorie 5");
+         categoriesList.add("categorie 6");
+         categoriesList.add("categorie 7");
     }
 }
