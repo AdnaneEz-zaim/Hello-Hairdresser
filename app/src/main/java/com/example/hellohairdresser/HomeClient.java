@@ -13,8 +13,10 @@ import android.widget.AdapterView;
 import com.example.hellohairdresser.Adapters.GridHairdresserNear;
 import com.example.hellohairdresser.Adapters.ImagesSliderAdapter;
 import com.example.hellohairdresser.Adapters.MyGridView;
+import com.example.hellohairdresser.Adapters.RecycleViewAdapterHairdresser;
 import com.example.hellohairdresser.Adapters.RecyclerViewAdapterCategories;
 import com.example.hellohairdresser.Adapters.RecyclerViewAdapterSalon;
+import com.example.hellohairdresser.Models.Hairdresser;
 import com.example.hellohairdresser.Models.Salon;
 
 import java.util.ArrayList;
@@ -26,7 +28,7 @@ public class HomeClient extends AppCompatActivity {
             R.drawable.image2, R.drawable.image3, R.drawable.adnane,
             R.drawable.image3, R.drawable.image3, R.drawable.adnane};
 
-//  Recycle view Categories
+//  Recycle view Categories __variables
     // Recycler View object
     RecyclerView recycleViewCategories;
     // Array list for recycler view data categoriesList
@@ -36,15 +38,20 @@ public class HomeClient extends AppCompatActivity {
     // adapter class object
     RecyclerViewAdapterCategories adapterCategories;
     // Linear Layout Manager
-    LinearLayoutManager HorizontalLayout;
+    LinearLayoutManager HorizontalLayout,HorizontalLayoutSalon,HorizontalLayoutHairdressers;
 
-// Recycle view Salon proche
+// Recycle view Salon near __variables
     //Recycler View object
     RecyclerView recyclerViewSalon;
     //ArrayList for recycle view ListSalon
     ArrayList<Salon> salonList;
     // salon adapter
     RecyclerViewAdapterSalon recyclerViewAdapterSalon;
+
+// Recycle view hairdresser __variables
+    RecyclerView recyclerViewHairdressers;
+    ArrayList<Hairdresser> hairdresserList;
+    RecycleViewAdapterHairdresser recycleViewAdapterHairdresser;
 
 
 
@@ -113,11 +120,43 @@ public class HomeClient extends AppCompatActivity {
 
         // Set Horizontal Layout Manager
         // for Recycler view
-       // HorizontalLayout = new LinearLayoutManager(HomeClient.this, LinearLayoutManager.HORIZONTAL, false);
-        recyclerViewSalon.setLayoutManager(HorizontalLayout);
+        HorizontalLayoutSalon = new LinearLayoutManager(HomeClient.this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewSalon.setLayoutManager(HorizontalLayoutSalon);
 
         // Set adapter on recycler view
         recyclerViewSalon.setAdapter(recyclerViewAdapterSalon);
+
+
+        //Hairdresser List
+        // initialisation with id's
+        recyclerViewHairdressers = (RecyclerView)findViewById(R.id.recyclerviewHairDressers);
+        //RecyclerViewLayoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerViewHairdressers.setLayoutManager(RecyclerViewLayoutManager);
+        // Adding items to RecyclerView.
+        AddItemsToRecyclerViewHairdresserList();
+
+        // calling constructor of adapter
+        // with categoriesList list as a parameter
+        recycleViewAdapterHairdresser = new RecycleViewAdapterHairdresser(hairdresserList);
+
+        // Set Horizontal Layout Manager
+        // for Recycler view
+        HorizontalLayoutHairdressers = new LinearLayoutManager(HomeClient.this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewHairdressers.setLayoutManager(HorizontalLayoutHairdressers);
+
+        // Set adapter on recycler view
+        recyclerViewHairdressers.setAdapter(recycleViewAdapterHairdresser);
+    }
+
+    private void AddItemsToRecyclerViewHairdresserList() {
+        hairdresserList = new ArrayList<>();
+        hairdresserList.add(new Hairdresser("adnane ez-zaim",4.8,"0601198272"));
+        hairdresserList.add(new Hairdresser("Amine tchiche",4.2,"0601198272"));
+        hairdresserList.add(new Hairdresser("Mohamed amine",3.8,"0601198272"));
+        hairdresserList.add(new Hairdresser("Anasse mokhetari",4.8,"0601198272"));
+        hairdresserList.add(new Hairdresser("Islam slimani",4.8,"0601198272"));
+        hairdresserList.add(new Hairdresser("Wahbi salim",4.8,"0601198272"));
+
     }
 
     private void AddItemsToRecyclerViewSalonList() {
