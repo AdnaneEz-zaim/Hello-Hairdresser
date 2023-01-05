@@ -1,27 +1,24 @@
 package com.example.hellohairdresser;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
-import android.content.Intent;
+import android.content.Context;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-
-import com.example.hellohairdresser.Adapters.GridHairdresserNear;
+import android.widget.Toast;
 import com.example.hellohairdresser.Adapters.ImagesSliderAdapter;
 import com.example.hellohairdresser.Adapters.MyGridView;
 import com.example.hellohairdresser.Adapters.RecycleViewAdapterHairdresser;
 import com.example.hellohairdresser.Adapters.RecyclerViewAdapterCategories;
 import com.example.hellohairdresser.Adapters.RecyclerViewAdapterSalon;
 import com.example.hellohairdresser.Models.Hairdresser;
+import com.example.hellohairdresser.Models.ItemClickListenerHairdresser;
 import com.example.hellohairdresser.Models.Salon;
 
 import java.util.ArrayList;
 
-public class HomeClient extends AppCompatActivity {
+public class HomeClient extends AppCompatActivity{
     MyGridView simpleGrid;
     int logos[] = {R.drawable.image2, R.drawable.image3, R.drawable.adnane,
             R.drawable.image2, R.drawable.image3, R.drawable.adnane,
@@ -137,7 +134,16 @@ public class HomeClient extends AppCompatActivity {
 
         // calling constructor of adapter
         // with categoriesList list as a parameter
-        recycleViewAdapterHairdresser = new RecycleViewAdapterHairdresser(hairdresserList);
+        recycleViewAdapterHairdresser = new RecycleViewAdapterHairdresser(hairdresserList, new ItemClickListenerHairdresser() {
+            @Override
+            public void onItemClick(Hairdresser hairdresser) {
+                Context context = getApplicationContext();
+                CharSequence text = "Hello toast!";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(context, hairdresser.getName(), duration);
+                toast.show();
+            }
+        });
 
         // Set Horizontal Layout Manager
         // for Recycler view
@@ -182,4 +188,5 @@ public class HomeClient extends AppCompatActivity {
          categoriesList.add("categorie 6");
          categoriesList.add("categorie 7");
     }
+
 }
