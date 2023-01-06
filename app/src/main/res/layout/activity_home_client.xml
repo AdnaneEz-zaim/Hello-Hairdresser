@@ -10,51 +10,65 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingHorizontal="20dp"
+        android:paddingHorizontal="10dp"
         android:paddingVertical="10dp"
-        >
-        <TextView
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_logo"
+            android:src="@drawable/logo_app" />
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hey adnane !"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Welcome to Hairdresser"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            />
-    </LinearLayout>
+            android:orientation="vertical"
+            android:paddingHorizontal="8dp"
 
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hey adnane !"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to Hairdresser"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pubsImages"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="165dp"
         android:background="@drawable/shape_button"
         />
     <!--Recycler View widget __categories-->
-    <androidx.recyclerview.widget.RecyclerView
+    <!--<androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerviewCategories"
         android:scrollbars="horizontal"
         android:focusable="false"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true" />-->
 <!--  mettre deux chose chaqu'une dans une cote  -->
-   <!-- <RelativeLayout
+    <RelativeLayout
         android:layout_width="match_parent"
+        android:paddingHorizontal="10dp"
         android:layout_height="wrap_content">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:text="Near Hairdresser"/>
+            android:text="Mens Hairdresser"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -62,7 +76,7 @@
             android:src="@drawable/ic_filter_list"
             android:backgroundTint="#FFF"
             />
-    </RelativeLayout>-->
+    </RelativeLayout>
 <!--    Grid View List-->
    <!-- <com.example.hellohairdresser.Adapters.MyGridView
         android:id="@+id/gridViewDresser"
@@ -76,6 +90,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
         android:text="Recommended for you"
         android:textColor="@color/black"
         android:textStyle="bold"
@@ -92,6 +107,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
         android:text="Hair specialist"
         android:textColor="@color/black"
         android:textStyle="bold"

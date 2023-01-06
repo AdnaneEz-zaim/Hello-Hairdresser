@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 import com.example.hellohairdresser.Adapters.ImagesSliderAdapter;
@@ -13,7 +14,6 @@ import com.example.hellohairdresser.Adapters.RecycleViewAdapterHairdresser;
 import com.example.hellohairdresser.Adapters.RecyclerViewAdapterCategories;
 import com.example.hellohairdresser.Adapters.RecyclerViewAdapterSalon;
 import com.example.hellohairdresser.Models.Hairdresser;
-import com.example.hellohairdresser.Models.ItemClickListenerHairdresser;
 import com.example.hellohairdresser.Models.Salon;
 
 import java.util.ArrayList;
@@ -62,8 +62,9 @@ public class HomeClient extends AppCompatActivity{
         ImagesSliderAdapter adapter = new ImagesSliderAdapter(this);
         viewPager.setAdapter(adapter);
 
+        RecyclerViewLayoutManager = new LinearLayoutManager(getApplicationContext());
 
-       /* //image grid slider
+        /* //image grid slider
         simpleGrid = (MyGridView) findViewById(R.id.gridViewDresser); // init GridView
         // Create an object of CustomAdapter and set Adapter to GirdView
         GridHairdresserNear customAdapter = new GridHairdresserNear(getApplicationContext(), logos);
@@ -81,26 +82,26 @@ public class HomeClient extends AppCompatActivity{
 
         //categories List
         // initialisation with id's
-        recycleViewCategories = (RecyclerView)findViewById(R.id.recyclerviewCategories);
-        RecyclerViewLayoutManager = new LinearLayoutManager(getApplicationContext());
+        //recycleViewCategories = (RecyclerView)findViewById(R.id.recyclerviewCategories);
+
 
         // Set LayoutManager on Recycler View
-        recycleViewCategories.setLayoutManager(RecyclerViewLayoutManager);
+        //recycleViewCategories.setLayoutManager(RecyclerViewLayoutManager);
 
         // Adding items to RecyclerView.
-        AddItemsToRecyclerViewArrayList();
+        //AddItemsToRecyclerViewArrayList();
 
         // calling constructor of adapter
         // with categoriesList list as a parameter
-        adapterCategories = new RecyclerViewAdapterCategories(categoriesList);
+        //adapterCategories = new RecyclerViewAdapterCategories(categoriesList);
 
         // Set Horizontal Layout Manager
         // for Recycler view
-        HorizontalLayout = new LinearLayoutManager(HomeClient.this, LinearLayoutManager.HORIZONTAL, false);
-        recycleViewCategories.setLayoutManager(HorizontalLayout);
+        //HorizontalLayout = new LinearLayoutManager(HomeClient.this, LinearLayoutManager.HORIZONTAL, false);
+        //recycleViewCategories.setLayoutManager(HorizontalLayout);
 
         // Set adapter on recycler view
-        recycleViewCategories.setAdapter(adapterCategories);
+        //recycleViewCategories.setAdapter(adapterCategories);
 
 
         // Salon List
@@ -134,7 +135,7 @@ public class HomeClient extends AppCompatActivity{
 
         // calling constructor of adapter
         // with categoriesList list as a parameter
-        recycleViewAdapterHairdresser = new RecycleViewAdapterHairdresser(hairdresserList, new ItemClickListenerHairdresser() {
+        recycleViewAdapterHairdresser = new RecycleViewAdapterHairdresser(hairdresserList, new RecycleViewAdapterHairdresser.ItemClickListenerHairdresser() {
             @Override
             public void onItemClick(Hairdresser hairdresser) {
                 Context context = getApplicationContext();
@@ -142,6 +143,10 @@ public class HomeClient extends AppCompatActivity{
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(context, hairdresser.getName(), duration);
                 toast.show();
+
+                Intent intent = new Intent(HomeClient.this, HairdresserProfilClient.class);
+                //intent.putExtra("image", logos[position]); // put image data in Intent
+                startActivity(intent); // start Intent
             }
         });
 
@@ -162,7 +167,6 @@ public class HomeClient extends AppCompatActivity{
         hairdresserList.add(new Hairdresser("Anasse mokhetari",4.8,"0601198272"));
         hairdresserList.add(new Hairdresser("Islam slimani",4.8,"0601198272"));
         hairdresserList.add(new Hairdresser("Wahbi salim",4.8,"0601198272"));
-
     }
 
     private void AddItemsToRecyclerViewSalonList() {
@@ -188,5 +192,6 @@ public class HomeClient extends AppCompatActivity{
          categoriesList.add("categorie 6");
          categoriesList.add("categorie 7");
     }
+
 
 }

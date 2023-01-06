@@ -22,7 +22,7 @@ public class HairdresserProfilClient extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hairdresser_profil_client);
 
-        ViewPager viewPager = findViewById(R.id.viewPagerIamge);
+        ViewPager viewPager = findViewById(R.id.viewPagerImage);
         ImagesSliderAdapter adapter = new ImagesSliderAdapter(this);
         viewPager.setAdapter(adapter);
 

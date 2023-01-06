@@ -296,7 +296,7 @@
                 android:textColor="@color/vertApp"
                 android:textSize="17sp" />
             <androidx.viewpager.widget.ViewPager
-                android:id="@+id/viewPagerIamge"
+                android:id="@+id/viewPagerImage"
                 android:layout_width="match_parent"
                 android:layout_height="320dp" />
             <TextView
